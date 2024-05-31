@@ -8,7 +8,7 @@ module.exports = {
 		countDown: 6,
 		role: 2,
 		description: "𝗃𝖺𝗅𝖺𝗇𝗄𝖺𝗇 𝗄𝗈𝖽𝖾", 
-		category: "ADMIM",
+		category: "ADMIN",
 		guide: { id: "{pn} <𝗄𝗈𝖽𝖾>" }
 	},
 

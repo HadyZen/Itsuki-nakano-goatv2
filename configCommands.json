@@ -26,5 +26,8 @@
     "logsbot": {
       "allow": true
     }
-  }
+  },
+  "commandUnload": [
+    "cmd.js"
+  ]
 }
