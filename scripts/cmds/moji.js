@@ -7,8 +7,8 @@ module.exports = {
    author: 'Riley',
    role: 0,
    category: 'MEDIA',
-   description: '𝗎𝖻𝖺𝗁 𝗄𝖺𝗍𝖺 𝗃𝖺𝖽𝗂 𝖾𝗆𝗈𝗃𝗂'
-   guide: { id: '{pn} <𝗄𝖺𝗍𝖺> }
+   description: '𝗎𝖻𝖺𝗁 𝗄𝖺𝗍𝖺 𝗃𝖺𝖽𝗂 𝖾𝗆𝗈𝗃𝗂', 
+   guide: { id: '{pn} <𝗄𝖺𝗍𝖺>' }
     },
     onStart: async function ({ api, message, args }) {
     const query = args.join(" ");
