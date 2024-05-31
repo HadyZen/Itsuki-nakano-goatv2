@@ -1,27 +1,13 @@
 module.exports = {
 	config: {
 		name: "kick",
-		version: "1.3",
+		version: "1.2",
 		author: "NTKhang",
-		countDown: 5,
+		countDown: 10,
 		role: 1,
-		description: {
-			vi: "Kick thành viên khỏi box chat",
-			en: "Kick member out of chat box"
-		},
-		category: "box chat",
-		guide: {
-			vi: "   {pn} @tags: dùng để kick những người được tag",
-			en: "   {pn} @tags: use to kick members who are tagged"
-		}
-	},
-
-	langs: {
-		vi: {
-			needAdmin: "Vui lòng thêm quản trị viên cho bot trước khi sử dụng tính năng này"
-		},
-		en: {
-			needAdmin: "Please add admin for bot before using this feature"
+		description: "𝗍𝖾𝗇𝖽𝖺𝗇𝗀 𝗆𝖾𝗆𝖻𝖾𝗋 𝖽𝖺𝗋𝗂 𝗀𝗋𝗎𝗉", 
+		category: "GRUP",
+		guide: { id: "   {pn} <𝗍𝖺𝗀/𝖻𝖺𝗅𝖺𝗌>"
 		}
 	},
 
@@ -34,7 +20,7 @@ module.exports = {
 				await api.removeUserFromGroup(uid, event.threadID);
 			}
 			catch (e) {
-				message.reply(getLang("needAdmin"));
+				message.reply("𝖧𝖺𝗋𝖺𝗉 𝗃𝖺𝖽𝗂𝗄𝖺𝗇 𝗋𝖺𝖿𝖿𝖺 𝖺𝖽𝗆𝗂𝗇 𝗍𝖾𝗋𝗅𝖾𝖻𝗂𝗁 𝖽𝖺𝗁𝗎𝗅𝗎!");
 				return "ERROR";
 			}
 		}
