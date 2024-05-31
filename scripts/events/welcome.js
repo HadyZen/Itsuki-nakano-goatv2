@@ -5,20 +5,31 @@ if (!global.temp.welcomeEvent)
 module.exports = {
 	config: {
 		name: "welcome",
-		version: "1.5",
+		version: "1.7",
 		author: "NTKhang",
 		category: "events"
 	},
 
 	langs: {
-		id: {
-			session1: "𝗉𝖺𝗀𝗂",
-			session2: "𝗌𝗂𝖺𝗇𝗀",
-			session3: "𝗌𝗈𝗋𝖾",
-			session4: "𝗆𝖺𝗅𝖺𝗆",
-			multiple1: "𝗄𝖺𝗆𝗎",
-			multiple2: "𝗅𝗎",
-			defaultWelcomeMessage: `𝖧𝖺𝗂 𝗌𝖺𝗒𝖺𝗇𝗀! 🫥\n𝖡𝗎𝖺𝗍 {multiple} 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂 {boxName}\n𝗌𝖾𝗆𝗈𝗀𝖺 {session}𝗆𝗎 𝗆𝖾𝗇𝗒𝖾𝗇𝖺𝗇𝗀𝗄𝖺𝗇! 🫰`
+		vi: {
+			session1: "sáng",
+			session2: "trưa",
+			session3: "chiều",
+			session4: "tối",
+			welcomeMessage: "Cảm ơn bạn đã mời tôi vào nhóm!\nPrefix bot: %1\nĐể xem danh sách lệnh hãy nhập: %1help",
+			multiple1: "bạn",
+			multiple2: "các bạn",
+			defaultWelcomeMessage: "Xin chào {userName}.\nChào mừng bạn đến với {boxName}.\nChúc bạn có buổi {session} vui vẻ!"
+		},
+		en: {
+			session1: "morning",
+			session2: "noon",
+			session3: "afternoon",
+			session4: "evening",
+			welcomeMessage: "Thank you for inviting me to the group!\nBot prefix: %1\nTo view the list of commands, please enter: %1help",
+			multiple1: "you",
+			multiple2: "you guys",
+			defaultWelcomeMessage: `Hello {userName}.\nWelcome {multiple} to the chat group: {boxName}\nHave a nice {session} 😊`
 		}
 	},
 
@@ -26,7 +37,6 @@ module.exports = {
 		if (event.logMessageType == "log:subscribe")
 			return async function () {
 				const hours = getTime("HH");
-       const pipi = await global.utils.getStreamFromURL("https://ibb.co.com/vP3b7zV");
 				const { threadID } = event;
 				const { nickNameBot } = global.GoatBot.config;
 				const prefix = global.utils.getPrefix(threadID);
@@ -35,7 +45,7 @@ module.exports = {
 				if (dataAddedParticipants.some((item) => item.userFbId == api.getCurrentUserID())) {
 					if (nickNameBot)
 						api.changeNickname(nickNameBot, threadID, api.getCurrentUserID());
-					return message.send("𝖬𝖺𝗅𝖺𝗌 𝗆𝖾𝗇𝖺𝗇𝗀𝗀𝖺𝗉𝗂! 🧢");
+					return message.send(getLang("welcomeMessage", prefix));
 				}
 				// if new member:
 				if (!global.temp.welcomeEvent[threadID])
@@ -44,15 +54,18 @@ module.exports = {
 						dataAddedParticipants: []
 					};
 
+				// push new member to array
 				global.temp.welcomeEvent[threadID].dataAddedParticipants.push(...dataAddedParticipants);
+				// if timeout is set, clear it
 				clearTimeout(global.temp.welcomeEvent[threadID].joinTimeout);
 
+				// set new timeout
 				global.temp.welcomeEvent[threadID].joinTimeout = setTimeout(async function () {
-					const dataAddedParticipants = global.temp.welcomeEvent[threadID].dataAddedParticipants;
 					const threadData = await threadsData.get(threadID);
-					const dataBanned = threadData.data.banned_ban || [];
 					if (threadData.settings.sendWelcomeMessage == false)
 						return;
+					const dataAddedParticipants = global.temp.welcomeEvent[threadID].dataAddedParticipants;
+					const dataBanned = threadData.data.banned_ban || [];
 					const threadName = threadData.threadName;
 					const userName = [],
 						mentions = [];
@@ -107,8 +120,11 @@ module.exports = {
 							acc.push(drive.getFile(file, "stream"));
 							return acc;
 						}, []);
+						form.attachment = (await Promise.allSettled(attachments))
+							.filter(({ status }) => status == "fulfilled")
+							.map(({ value }) => value);
 					}
-					message.send({ body: form, attachment: pipi });
+					message.send(form);
 					delete global.temp.welcomeEvent[threadID];
 				}, 1500);
 			};
