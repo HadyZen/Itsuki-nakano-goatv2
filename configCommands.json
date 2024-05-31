@@ -1,1 +1,30 @@
-{}
+{
+  "envCommands": {
+    "appstore": {
+      "limitResult": 3
+    },
+    "daily": {
+      "rewardFirstDay": {
+        "coin": 100,
+        "exp": 10
+      }
+    },
+    "dhbc": {
+      "reward": 1000
+    },
+    "notification": {
+      "delayPerGroup": 250
+    },
+    "rank": {
+      "deltaNext": 5
+    },
+    "rankup": {
+      "deltaNext": 5
+    }
+  },
+  "envEvents": {
+    "logsbot": {
+      "allow": true
+    }
+  }
+}
