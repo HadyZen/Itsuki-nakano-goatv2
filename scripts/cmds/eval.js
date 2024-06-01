@@ -13,7 +13,9 @@ module.exports = {
 	},
 
 langs: { 
- id: { a: "Error" }
+  id: { 
+ error: "Error" 
+  }
 }, 
 
 	onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
@@ -50,7 +52,7 @@ langs: {
 			catch(err) {
 				log.err("eval command", err);
 				message.send(
-					"{ getLang: "a" }:\n" +
+					"${getLang("error")}:\n" +
 					(err.stack ?
 						removeHomeDir(err.stack) :
 						removeHomeDir(JSON.stringify(err, null, 2))
