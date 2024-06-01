@@ -3,20 +3,20 @@ const { removeHomeDir, log } = global.utils;
 module.exports = {
 	config: {
 		name: "eval",
-		version: "1.4",
+		version: "1.6",
 		author: "NTKhang",
-		countDown: 6,
+		countDown: 5,
 		role: 2,
-		description: "𝗃𝖺𝗅𝖺𝗇𝗄𝖺𝗇 𝗄𝗈𝖽𝖾", 
+		description: "tes kode", 
 		category: "ADMIN",
-		guide: { id: "{pn} <𝗄𝗈𝖽𝖾>" }
+		guide: { id: "{pn} <kode>" }
 	},
 
-langs: { 
-  id: { 
- error: "Error" 
-  }
-}, 
+	langs: {
+		id: {
+			error: "Error:"
+		}
+	},
 
 	onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
 		function output(msg) {
@@ -52,10 +52,10 @@ langs: {
 			catch(err) {
 				log.err("eval command", err);
 				message.send(
-					"${getLang("error")}:\n" +
+					"${getLang("error")}\\n" +
 					(err.stack ?
 						removeHomeDir(err.stack) :
-						removeHomeDir(JSON.stringify(err, null, 2))
+						removeHomeDir(JSON.stringify(err, null, 2) || "")
 					)
 				);
 			}

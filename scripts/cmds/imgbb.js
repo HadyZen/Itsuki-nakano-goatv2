@@ -11,14 +11,13 @@ module.exports = {
   },
 
   onStart: async function ({ message, event }) {
-      try { 
     const hadi = event.messageReply.attachments[0].url;
     const pipi = await global.utils.uploadImgbb(hadi);
     const raffa = pipi.image.url;
+if (raffa) {
    message.reply(raffa);
-
-} catch (error) {
-   message.reply('𝖧𝖺𝗋𝖺𝗉 𝖻𝖺𝗅𝖺𝗌 𝖿𝗈𝗍𝗈 𝖺𝗍𝖺𝗎 𝗏𝗂𝖽𝗂𝗈!')
+} else if (!raffa) {
+message.reply(hadi);
 }
  }
 }
