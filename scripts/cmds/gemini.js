@@ -22,8 +22,8 @@ module.exports = {
       message.reaction('✨', event.messageID);
       message.reply('𝖳𝗎𝗇𝗀𝗀𝗎 𝗌𝖾𝖻𝖾𝗇𝗍𝖺𝗋...');
       const gemini = await axios.get(`https://apis-samir.onrender.com/Gemini?text=${encodeURIComponent(tanyakan)}`);
-      const pipi = gemini.data.content;
-      const bh = pipi[0].text;
+      const pipi = gemini.data.content.parts;
+      const bh = pipi.text;
       const send = await message.send(`✨ 𝗚𝗲𝗺𝗶𝗻𝗶\n\n${bh}`);
       setTimeout(() => {
         api.unsendMessage(send.messageID);
