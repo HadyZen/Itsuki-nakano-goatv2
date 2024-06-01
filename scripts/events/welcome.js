@@ -18,7 +18,7 @@ module.exports = {
 			session4: "𝗆𝖺𝗅𝖺𝗆",
 			multiple1: "𝗄𝖺𝗆𝗎",
 			multiple2: "𝗅𝗎",
-			defaultWelcomeMessage: `𝖧𝖺𝗂 𝗌𝖺𝗒𝖺𝗇𝗀! 🫥\n𝖡𝗎𝖺𝗍 {multiple} 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂 {boxName}\n𝗌𝖾𝗆𝗈𝗀𝖺 {session}𝗆𝗎 𝗆𝖾𝗇𝗒𝖾𝗇𝖺𝗇𝗀𝗄𝖺𝗇! 🫰`
+			
 		}
 	},
 
@@ -27,6 +27,9 @@ module.exports = {
 			return async function () {
 				const hours = getTime("HH");
        const pipi = await global.utils.getStreamFromURL("https://ibb.co.com/vP3b7zV");
+        const kon = `𝖧𝖺𝗂 𝗌𝖺𝗒𝖺𝗇𝗀! 🫥\n𝖡𝗎𝖺𝗍 {multiple} 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂 {boxName}\n𝗌𝖾𝗆𝗈𝗀𝖺 {session}𝗆𝗎 𝗆𝖾𝗇𝗒𝖾𝗇𝖺𝗇𝗀𝗄𝖺𝗇! 🫰`;
+
+		
 				const { threadID } = event;
 				const { nickNameBot } = global.GoatBot.config;
 				const prefix = global.utils.getPrefix(threadID);
@@ -81,7 +84,7 @@ module.exports = {
 					const form = {
 						mentions: welcomeMessage.match(/\{userNameTag\}/g) ? mentions : null
 					};
-					welcomeMessage = welcomeMessage
+	        const tol = kon
 						.replace(/\{userName\}|\{userNameTag\}/g, userName.join(", "))
 						.replace(/\{boxName\}|\{threadName\}/g, threadName)
 						.replace(
@@ -108,7 +111,7 @@ module.exports = {
 							return acc;
 						}, []);
 					}
-					message.send({ body: form, attachment: pipi });
+					message.send({ body: tol, attachment: pipi });
 					delete global.temp.welcomeEvent[threadID];
 				}, 1500);
 			};
