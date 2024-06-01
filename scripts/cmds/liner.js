@@ -2,12 +2,12 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: 'gemini',
-    version: '1.2',
+    name: 'liner',
+    version: '1.0',
     countDown: 10,
     role: 0,
     category: 'AI',
-    description: '𝗀𝖾𝗆𝗂𝗇𝗂 𝖺𝗂',
+    description: '𝗅𝗂𝗇𝖾𝗋 𝖺𝗂',
     author: 'Rizky Z (hadi)',
     guide: { id: '{pn} <𝗉𝗋𝗈𝗆𝗉𝗍>' }
   },
@@ -21,10 +21,9 @@ module.exports = {
     try {
       message.reaction('✨', event.messageID);
       message.reply('𝖳𝗎𝗇𝗀𝗀𝗎 𝗌𝖾𝖻𝖾𝗇𝗍𝖺𝗋...');
-      const gemini = await axios.get(`https://apis-samir.onrender.com/Gemini?text=${encodeURIComponent(tanyakan)}`);
-      const pipi = gemini.data.content.parts;
-      const bh = pipi.text;
-      const send = await message.send(`✨ 𝗚𝗲𝗺𝗶𝗻𝗶\n\n${bh}`);
+      const gemini = await axios.get(`https://apis-samir.onrender.com/liner?prompt=${encodeURIComponent(tanyakan)}`);
+      const pipi = gemini.data.answer;
+      const send = await message.send(`✨ 𝗟𝗶𝗻𝗲𝗿 𝗔𝗜\n\n${pipi}`);
       setTimeout(() => {
         api.unsendMessage(send.messageID);
       }, 92000);
