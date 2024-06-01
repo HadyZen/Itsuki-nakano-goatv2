@@ -12,6 +12,10 @@ module.exports = {
 		guide: { id: "{pn} <𝗄𝗈𝖽𝖾>" }
 	},
 
+langs: { 
+ id: { a: "Error" }
+}, 
+
 	onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
 		function output(msg) {
 			if (typeof msg == "number" || typeof msg == "boolean" || typeof msg == "function")
@@ -46,7 +50,7 @@ module.exports = {
 			catch(err) {
 				log.err("eval command", err);
 				message.send(
-					"𝖤𝗋𝗋𝗈𝗋:\n" +
+					"{ getLang: "a" }:\n" +
 					(err.stack ?
 						removeHomeDir(err.stack) :
 						removeHomeDir(JSON.stringify(err, null, 2))
