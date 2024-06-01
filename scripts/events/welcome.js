@@ -26,7 +26,7 @@ module.exports = {
 		if (event.logMessageType == "log:subscribe")
 			return async function () {
 				const hours = getTime("HH");
-       const pipi = await global.utils.getStreamFromURL("https://ibb.co.com/vP3b7zV");
+        const pipi = await global.utils.getStreamFromURL("https://i.ibb.co/vLDCjgc/436744902-429814226465055-4974109979916213420-n-jpg-nc-cat-106-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-Gfz.jpg");
         const kon = `𝖧𝖺𝗂 𝗌𝖺𝗒𝖺𝗇𝗀! 🫥\n𝖡𝗎𝖺𝗍 {multiple} 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂 {boxName}\n𝗌𝖾𝗆𝗈𝗀𝖺 {session}𝗆𝗎 𝗆𝖾𝗇𝗒𝖾𝗇𝖺𝗇𝗀𝗄𝖺𝗇! 🫰`;
 
 		

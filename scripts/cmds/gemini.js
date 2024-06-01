@@ -19,7 +19,7 @@ module.exports = {
     }
 
     try {
-      message.react('✨');
+      message.reaction('✨', event.messageID);
       message.reply('𝖳𝗎𝗇𝗀𝗀𝗎 𝗌𝖾𝖻𝖾𝗇𝗍𝖺𝗋...');
       const gemini = await axios.get(`https://69070.replit.app/gemini?prompt=${encodeURIComponent(tanyakan)}`);
       const pipi = gemini.data.response;
