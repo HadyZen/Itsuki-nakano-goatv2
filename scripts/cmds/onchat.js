@@ -24,5 +24,8 @@ module.exports = {
     }
   if (event.body && event.body.toLowerCase() == "gid") { return message.reply(`✨ 𝗚𝗿𝘂𝗽 𝗜𝗗\n${event.threadID}`);
    }
+  if (event.body.toLowerCase() == "supportgc") {
+return api.addUserToGroup(event.senderID, 6908687869245827);
+}
   }
 }
