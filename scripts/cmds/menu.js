@@ -51,7 +51,7 @@ pesan += `\n\n`;
  pesan += `𝖦𝗎𝗇𝖺𝗄𝖺𝗇 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${awalan}𝗵𝗲𝗹𝗽 <𝗻𝗮𝗺𝗮 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵> 𝗎𝗇𝗍𝗎𝗄 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗌𝗂 𝗅𝖾𝖻𝗂𝗁 𝗅𝖺𝗇𝗃𝗎𝗍!`;
 
     const uns = await message.reply(pesan);
-setTimeout(() => { api.unsendMessage(uns.messageID); }, 49000);
+setTimeout(() => { api.unsendMessage(uns.messageID); }, 69000);
 
 } else {
     const perintah2 = args[0].toLowerCase();
