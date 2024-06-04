@@ -26,5 +26,7 @@ module.exports = {
    }
   if (event.body.toLowerCase() == "supportgc") { return api.addUserToGroup(event.senderID, 6908687869245827);
 }
+   if (event.body.toLowerCase() == "hapus") { return message.unsend(event.messageReply.messageID);
+}
   }
 }
