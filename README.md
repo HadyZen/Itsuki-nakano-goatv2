@@ -1,15 +1,17 @@
-<img src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner">
-<h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> Goat Bot - Bot Chat Messenger</h1>
+<img src="https://i.ibb.co/txRVVB5/430858246-428501242963960-355451129594147803-n-jpg-nc-cat-103-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-F78-Z.jpg" alt="banner">
+<h1 align="center"><img width="22px"> ✨ Raffa Badry ツ</h1>
 
 <p align="center">
 	<a href="https://nodejs.org/dist/v16.20.0">
-		<img src="https://img.shields.io/badge/Nodejs%20Support-16.x-brightgreen.svg?style=flat-square" alt="Nodejs Support v16.x">
+		<img src="https://img.shields.io/badge/Nodejs 16.x-brightgreen.svg?style=flat-square" alt="nodejs v16.x">
 	</a>
-  <img alt="size" src="https://img.shields.io/github/repo-size/ntkhang03/Goat-Bot-V2.svg?style=flat-square&label=size">
-  <img alt="code-version" src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=code%20version&prefix=v&query=%24.version&url=https://github.com/ntkhang03/Goat-Bot-V2/raw/main/package.json&style=flat-square">
-  <img alt="visitors" src="https://visitor-badge.laobi.icu/badge?style=flat-square&page_id=ntkhang3.Goat-Bot-V2">
-  <img alt="size" src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=brightgreen">
+  <img alt="ukuran" src="https://img.shields.io/github/repo-size/ntkhang03/Goat-Bot-V2.svg?style=flat-square&label=size">
+  <img alt="ukuran" src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=brightgreen">
 </p>
 
-# Raffa-badry-beta
-# Raffa-badry-beta
+✨ Setiap impian yang kamu percaya, akan memberimu keberanian untuk mencapainya
+- Code asli dari NTKhang03
+- Raffa Badry AI by hadi pranata
+
+# hadi pranata ツ
+
