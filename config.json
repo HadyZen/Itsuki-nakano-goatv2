@@ -59,7 +59,7 @@
     "socket": {
       "enable": true,
       "channelName": "uptime",
-      "verifyToken": ""
+      "verifyToken": "https://coral-speckle-swing.glitch.me/uptime"
     }
   },
   "autoRestart": {
@@ -69,7 +69,7 @@
   "autoUptime": {
     "enable": false,
     "timeInterval": 600000,
-    "url": "",
+    "url": "https://coral-speckle-swing.glitch.me/uptime",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
   "autoLoadScripts": {
