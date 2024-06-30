@@ -2,12 +2,12 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: 'gpt4',
+    name: 'gpt',
     version: '1.0',
     countDown: 10,
     role: 0,
     category: 'AI',
-    description: '𝗀𝗉𝗍-𝟦 𝗈𝗋𝗂𝗀𝗂𝗇𝖺𝗅',
+    description: '𝗀𝗉𝗍 𝗈𝗋𝗂𝗀𝗂𝗇𝖺𝗅',
     author: 'Rizky Z (hadi)',
     guide: { id: '{pn} <𝗉𝗋𝗈𝗆𝗉𝗍>' }
   },
@@ -16,10 +16,10 @@ module.exports = {
     const tanyakan = args.join(' ') || "hai";
 
     try {
-      message.reaction('✨', event.messageID);
-      const gemini = await axios.get(`https://deku-rest-api-3ijr.onrender.com/new/gpt-4_adv?prompt=${encodeURIComponent(tanyakan)}`);
-      const pipi = gemini.data.result.reply;
-      const send = await message.reply(`✨ 𝗚𝗣𝗧-𝟰\n\n${pipi}`);
+      message.reaction('❤', event.messageID);
+      const gemini = await axios.get(`https://gpt-four.vercel.app/gpt?prompt=${encodeURIComponent(tanyakan)}`);
+      const pipi = gemini.data.answer;
+      const send = await message.reply(`♡ 𝗚𝗣𝗧\n\n${pipi}`);
       setTimeout(() => {
         api.unsendMessage(send.messageID);
       }, 92000);
