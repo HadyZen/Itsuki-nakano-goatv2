@@ -1,5 +1,5 @@
-<img src="https://i.ibb.co/txRVVB5/430858246-428501242963960-355451129594147803-n-jpg-nc-cat-103-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-F78-Z.jpg" alt="banner">
-<h1 align="center"><img width="22px"> ✨ Raffa Badry ツ</h1>
+<img src="https://i.ibb.co/S7NGyqQ/441990035-719770016836199-2138699235077975555-n-jpg-stp-dst-jpg-p480x480-nc-cat-109-ccb-1-7-nc-sid-9.jpg" alt="banner">
+<h1 align="center"><img width="22px"> Nakano Itsuki ♡</h1>
 
 <p align="center">
 	<a href="https://nodejs.org/dist/v16.20.0">
@@ -11,7 +11,6 @@
 
 ✨ Setiap impian yang kamu percaya, akan memberimu keberanian untuk mencapainya
 - Code asli dari NTKhang03
-- Raffa Badry AI by hadi pranata
+- Itsuki nakano by Hady Zen
 
-# hadi pranata ツ
-
+# Hady Zen ♡
