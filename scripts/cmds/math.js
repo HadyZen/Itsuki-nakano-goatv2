@@ -16,12 +16,12 @@ module.exports = {
       try { 
     const soal = args.join(' ');
     if (!soal) {
-     return message.reply('𝖲𝗂𝗅𝖺𝗁𝗄𝖺𝗇 𝗆𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝗌𝗈𝖺𝗅!')
+     return message.reply('𝖬𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝗌𝗈𝖺𝗅𝗆𝗎 𝗍𝗎𝖺𝗇!')
 }
     const jumlah = await axios.get(`http://api.mathjs.org/v4/?expr=${encodeURIComponent(soal)}`);
     const hasil = jumlah.data;
     if (hasil && jumlah.data) {
-     return message.reply(`✨ 𝗠𝗮𝘁𝗵\n𝗃𝗎𝗆𝗅𝖺𝗁: ${soal} = ${hasil}`);
+     return message.reply(`♡ ${soal} = ${hasil}`);
 } else {
   message.reply('𝖲𝗈𝖺𝗅 𝗄𝖺𝗆𝗎 𝗍𝗂𝖽𝖺𝗄 𝗏𝖺𝗅𝗂𝖽!')
 }
