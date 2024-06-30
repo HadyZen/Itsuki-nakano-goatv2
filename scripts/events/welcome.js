@@ -11,7 +11,7 @@ module.exports = {
 	},
 
 	langs: {
-		en: {
+		id: {
 			session1: "𝗉𝖺𝗀𝗂",
 			session2: "𝗌𝗂𝖺𝗇𝗀",
 			session3: "𝗌𝗈𝗋𝖾",
