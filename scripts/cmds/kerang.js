@@ -3,7 +3,7 @@ module.exports = {
         name: 'kerang',
         version: 1.0,
         role: 0,
-        author: "Rizky Z (Hadi)", 
+        author: "Hady Zen", 
         countDown: 16,
         description: "𝖡𝖾𝗋𝗍𝖺𝗇𝗒𝖺 𝗄𝖾𝗉𝖺𝖽𝖺 𝗄𝖾𝗋𝖺𝗇𝗀 𝖺𝗃𝖺𝗂𝖻", 
         category: 'GAME',
