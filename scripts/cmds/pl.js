@@ -17,7 +17,7 @@ module.exports = {
  config: {
   name: "pl",
   version: "1.15",
-  author: "Ntkhang | Rizky Z",
+  author: "Ntkhang | Hady Zen",
   countDown: 6,
   role: 2,
   description: "𝗂𝗇𝗌𝗍𝖺𝗅𝗅, 𝖽𝖾𝗅, 𝖿𝗂𝗅𝖾, 𝖽𝖺𝗇 𝗅𝗈𝖺𝖽 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁 𝗋𝖺𝖿𝖿𝖺", 
