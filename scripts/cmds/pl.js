@@ -4,6 +4,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const cheerio = require("cheerio");
 const { client } = global;
+const bin = require('pastebin-js');
 const { configCommands } = global.GoatBot;
 const { log, loading, removeHomeDir } = global.utils;
 
