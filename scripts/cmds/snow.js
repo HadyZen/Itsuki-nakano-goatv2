@@ -8,9 +8,9 @@ module.exports = {
     role: 0,
     category: "AI",
     description: "𝖻𝖾𝗋𝗍𝖺𝗇𝗒𝖺 𝖽𝖾𝗇𝗀𝖺𝗇 𝗌𝗇𝗈𝗐𝖿𝗅𝖺𝗄𝖾",
-    author: "Rizky Z (hadi)",
+    author: "Hady Zen",
     guide: { id: "{pn} <𝗍𝖺𝗇𝗒𝖺>" }
-  },
+  }, 
 
   onStart: async function ({ message, args, api, event }) {
       const pertanyaan = args.join(' ');
@@ -21,8 +21,8 @@ module.exports = {
     message.reaction("⌛", event.messageID);
     const snow = await axios.get(`https://hashier-api-snowflake.vercel.app/api/snowflake?ask=${encodeURIComponent(pertanyaan)}`);
     const flake = snow.data.response;
-    message.reaction("✨", event.messageID);
-    const pesan = await message.reply(`✨ 𝗦𝗻𝗼𝘄𝗳𝗹𝗮𝗸𝗲\n\n${flake}`);
+    message.reaction("💙", event.messageID);
+    const pesan = await message.reply(`♡ 𝗦𝗻𝗼𝘄𝗳𝗹𝗮𝗸𝗲\n\n${flake}`);
     setTimeout(() => { api.unsendMessage(pesan.messageID); }, 92000);
    } catch (error) {
        message.reply('𝖤𝗋𝗋𝗈𝗋');
