@@ -1,6 +1,6 @@
 {
   "facebookAccount": {
-    "email": "",
+    "email": "bintangbiru425@gmail.com",
     "password": "",
     "2FASecret": "",
     "i_user": "",
@@ -17,7 +17,6 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61555872531277",
     "100088085177610"
   ],
   "whiteListMode": {
@@ -25,7 +24,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "𝖱𝖺𝖿𝖿𝖺 𝖡𝖺𝖽𝗋𝗒",
+  "nickNameBot": "𝖨𝗍𝗌𝗎𝗄𝗂 𝖭𝖺𝗄𝖺𝗇𝗈 ♡",
   "prefix": ":",
   "database": {
     "type": "sqlite",
@@ -59,17 +58,17 @@
     "socket": {
       "enable": true,
       "channelName": "uptime",
-      "verifyToken": "https://coral-speckle-swing.glitch.me/uptime"
+      "verifyToken": ""
     }
   },
   "autoRestart": {
-    "time": 600000,
+    "time": 82800000,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
   "autoUptime": {
     "enable": false,
     "timeInterval": 600000,
-    "url": "https://coral-speckle-swing.glitch.me/uptime",
+    "url": "",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
   "autoLoadScripts": {
