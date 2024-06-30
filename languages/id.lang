@@ -131,10 +131,10 @@ updater.cantFindVersion=Kamu menggunakan versi yang belum ditentukan (%1), harap
 updater.newVersions=Ada %1 versi terbaru yang perlu diperbarui, mulai diperbarui...
 updater.updateSuccess=Perbarui berhasil%1
 updater.configChanged=%1 telah diubah, silahkan periksa kembali file config.json-mu!
-updater.installingPackages=Menginstal dependensi untuk Raffa Badry...
-updater.installSuccess=Dependensi berhasil diinstal, mulai ulang Raffa Badry untuk menggunakan versi baru!
+updater.installingPackages=Menginstal dependensi untuk Itsuki...
+updater.installSuccess=Dependensi berhasil diinstal, mulai ulang Itsuki untuk menggunakan versi baru!
 updater.backupSuccess=Berhasil mencadangkan berkas yang diubah, lihat di folder %1
-updater.restartToApply=Mulai ulang Raffa Badry untuk menerapkan versi baru!
+updater.restartToApply=Mulai ulang Itsuki untuk menerapkan versi baru!
 updater.skipFile=Ada versi baru dari berkas %1, tetapi kamu telah melewatkan berkas ini selama proses pembaruan dengan komentar %2 di berkas ini!
 
 # dashboard/routes/verifyfbid.js
@@ -144,7 +144,7 @@ verifyfbid.sendCode=Kode verifikasi kamu adalah:\n%1\nKode verifikasi berlaku se
 utils.errorOccurred=Error\n\n%1
 
 # for command
-command.restartedBot=Raffa Badry telah dimulai ulang!
+command.restartedBot=Itsuki nakano telah dimulai ulang!
 
 # dashboard/app.js
 app.googleApiRefreshTokenExpired=Token penyegaran API Google telah kedaluwarsa atau dicabut, silakan dapatkan token baru!
