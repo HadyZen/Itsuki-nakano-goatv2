@@ -5,11 +5,11 @@ const exec = util.promisify(require('child_process').exec);
 module.exports = {
   config: {
     name: "uptime",
-    version: "𝟣.𝟨",
+    version: "𝟣.𝟩",
     countDown: 10,
     author: "Rizky Z (hadi)",
     role: 0,
-    description: "𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗌𝗂 𝗌𝗍𝖺𝗍𝗎𝗌 𝖻𝗈𝗍", 
+    description: "𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗌𝗂 𝗐𝖺𝗄𝗍𝗎 𝖺𝗄𝗍𝗂𝖿 𝗂𝗍𝗌𝗎𝗄𝗂", 
     category: "SISTEM",
     guide: { id: "{pn}" }
   },
@@ -23,9 +23,9 @@ onStart: async function ({ api, message, event, usersData, threadsData }) {
      const freeMemory = os.freemem();
      const usedMemory = totalMemory - freeMemory;
 
-     const arif = `${jam}𝗁 ${menit}𝗆`;
      const chika = Date.now();
-     const pipi = await global.utils.getStreamFromURL("https://i.imgur.com/owD6pwf.jpeg");
+     const arif = `${jam}𝗁 ${menit}𝗆`;
+     const pipi = await global.utils.getStreamFromURL("https://i.ibb.co/rsN4wrg/416740319-1499417970603631-7972838646614046876-n-jpg-stp-dst-jpg-p480x480-nc-cat-111-ccb-1-7-nc-sid.jpg");
 
      const diskUsage = await getDiskUsage();
      const edi = `${prettyBytes(diskUsage.used)}/${prettyBytes(diskUsage.total)}`;
@@ -36,25 +36,20 @@ onStart: async function ({ api, message, event, usersData, threadsData }) {
      const loufi = await threadsData.getAll(); 
      const luxion = `${os.type()} ${os.release()}`;
      const rizky = `${os.cpus()[0].model}`;
-     const versi = require("../../package.json").version;
-
      const nino = Date.now();
      const raffa = nino - chika;
 
-     const hadi = `[${ping(raffa)}] • 𝗦𝗜𝗦𝗧𝗘𝗠\n`
-                 + `\n- 𝖡𝗈𝗍 𝗉𝗂𝗇𝗀: ${raffa}`
-                 + `\n- 𝖡𝗈𝗍 𝗏𝖾𝗋𝗌𝗂: ${versi}`
+     const hadi = `[ ${ping(raffa)} | ${raffa} ] • 𝗨𝗣𝗧𝗜𝗠𝗘 ♡\n`
                  + `\n- 𝖳𝗈𝗍𝖺𝗅 𝗎𝗌𝖾𝗋: ${putra.length}`
                  + `\n- 𝖳𝗈𝗍𝖺𝗅 𝗀𝗋𝗎𝗉: ${loufi.length}`
-                 + `\n- 𝖢𝗈𝗋𝖾𝗌: ${os.cpus().length} 𝖼𝗈𝗋𝖾𝗌`
                  + `\n- 𝖴𝗉𝗍𝗂𝗆𝖾: ${arif}`
                  + `\n- 𝖣𝗂𝗌𝗄: ${edi}`
                  + `\n- 𝖱𝖺𝗆: ${riley}`
                  + `\n- 𝖬𝖾𝗆𝗈𝗋𝗒: ${saveng}` 
-                 + `\n- 𝖢𝖯𝖴: ${rizky}`;
+                 + `\n- 𝖢𝖯𝖴: ${rizky} (${os.cpus().length} 𝖼𝗈𝗋𝖾𝗌)`;
 
 const hapus = await message.reply({ body: hadi, attachment: pipi });
-setTimeout(() => { api.unsendMessage(hapus.messageID); }, 49000);
+setTimeout(() => { api.unsendMessage(hapus.messageID); }, 54000);
 }
 }
 
