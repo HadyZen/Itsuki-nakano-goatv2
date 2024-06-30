@@ -6,7 +6,7 @@ const font = {"1": "𝟭", "2": "𝟮", "3": "𝟯", "4": "𝟰", "5": "𝟱", "
 module.exports = {
 config: {
  name: "menu",
- version: "𝟣.𝟨",
+ version: "𝟣.𝟪",
  author: "Rizky Z (hadi)",
  countDown: 10,
  role: 0,
@@ -22,7 +22,7 @@ onStart: async function ({ api, message, args, event, role, globalData }) {
  if (kosong === 0) {
     const categories = {};
     let pesan = "";
-
+    pesan += "♡ 𝗗𝗮𝗳𝘁𝗮𝗿 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵\n\n";
 for (const [name, value] of commands) {
  if (value.config.role > 1 && role < value.config.role) continue;
     const category = value.config.category || "-";
@@ -48,7 +48,7 @@ pesan += `\n\n`;
 }
 });
 
- pesan += `𝖦𝗎𝗇𝖺𝗄𝖺𝗇 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${awalan}𝗵𝗲𝗹𝗽 <𝗻𝗮𝗺𝗮 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵> 𝗎𝗇𝗍𝗎𝗄 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗌𝗂 𝗅𝖾𝖻𝗂𝗁 𝗅𝖺𝗇𝗃𝗎𝗍!`;
+ pesan += `𝖦𝗎𝗇𝖺𝗄𝖺𝗇 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${awalan}𝗺𝗲𝗻𝘂 <𝗻𝗮𝗺𝗮 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵> 𝗎𝗇𝗍𝗎𝗄 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗌𝗂 𝗅𝖾𝖻𝗂𝗁 𝗅𝖺𝗇𝗃𝗎𝗍!`;
 
     const uns = await message.reply(pesan);
 setTimeout(() => { api.unsendMessage(uns.messageID); }, 69000);
@@ -59,7 +59,7 @@ setTimeout(() => { api.unsendMessage(uns.messageID); }, 69000);
 
 if (!perintah3) {
     const font3 = perintah2.split('').map(char => font[char]).join('');
-await message.reply(`𝖯𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${font3} 𝗍𝗂𝖽𝖺𝗄 𝖺𝖽𝖺 𝗍𝗎𝖺𝗇𝗄𝗎!`);
+await message.reply(`𝖯𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${font3} 𝗍𝗂𝖽𝖺𝗄 𝖺𝖽𝖺 𝗍𝗎𝖺𝗇𝗄𝗎! >𝗐<`);
 } else {
     const perintah4 = perintah3.config;
     const nama = perintah4.name;
@@ -75,13 +75,15 @@ await message.reply(`𝖯𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${font3} 𝗍𝗂𝖽𝖺�
 .replace(/\{pn\}/g, awalan + perintah4.name);
 
         const pesan = 
-`• 𝖭𝖺𝗆𝖺 ${nama}
-• 𝖬𝗈𝖽𝖾𝗅: ${model}
-• 𝖯𝖾𝗋𝖺𝗇: ${roleText} 
-• 𝖳𝖾𝗇𝖺𝗇𝗀: ${tenang}𝗌
-• 𝖯𝖾𝗇𝗎𝗅𝗂𝗌: ${penulis}
-• 𝖣𝗌𝗄𝗋𝗂𝗉𝗌: ${deskripsi}
-• 𝖯𝖺𝗇𝖽𝗎𝖺𝗇: ${panduan}`;
+`♡ 𝗜𝗻𝗳𝗼 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵
+
+- 𝖭𝖺𝗆𝖺 ${nama}
+- 𝖬𝗈𝖽𝖾𝗅: ${model}
+- 𝖯𝖾𝗋𝖺𝗇: ${roleText} 
+- 𝖳𝖾𝗇𝖺𝗇𝗀: ${tenang}𝗌
+- 𝖯𝖾𝗇𝗎𝗅𝗂𝗌: ${penulis}
+- 𝖣𝗌𝗄𝗋𝗂𝗉𝗌: ${deskripsi}
+- 𝖯𝖺𝗇𝖽𝗎𝖺𝗇: ${panduan}`;
 
 await message.reply(pesan);
    }
@@ -96,7 +98,7 @@ function peran(roleText) {
   case 1:
         return "𝖺𝖽𝗆𝗂𝗇 𝗀𝗋𝗎𝗉";
   case 2:
-        return "𝖺𝖽𝗆𝗂𝗇 𝗋𝖺𝖿𝖿𝖺";
+        return "𝖺𝖽𝗆𝗂𝗇 𝗄𝗎";
   default:
         return "-";
  }
