@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: 'imgbb',
     version: '1.0',
-    author: 'Rizky Z (hadi)',
+    author: 'Hady Zen',
     countDown: 10,
     role: 0,
     category: 'MEDIA',
@@ -18,7 +18,7 @@ module.exports = {
    message.reply(raffa);
 
 } catch (error) {
-   message.reply('𝖧𝖺𝗋𝖺𝗉 𝖻𝖺𝗅𝖺𝗌 𝖿𝗈𝗍𝗈 𝖺𝗍𝖺𝗎 𝗏𝗂𝖽𝗂𝗈!')
+   message.reply('𝖧𝖺𝗇𝗒𝖺 𝖿𝗈𝗍𝗈 𝖽𝖺𝗇 𝗏𝗂𝖽𝗂𝗈 𝗒𝖺𝗇𝗀 𝖻𝗂𝗌𝖺 𝗍𝗎𝖺𝗇!')
 }
  }
 }
