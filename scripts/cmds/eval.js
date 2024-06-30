@@ -5,7 +5,7 @@ module.exports = {
 		name: "eval",
 		version: "1.6",
 		author: "NTKhang",
-		countDown: 5,
+		countDown: 4,
 		role: 2,
 		description: "tes kode", 
 		category: "ADMIN",
