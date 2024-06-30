@@ -4,19 +4,19 @@ function sleep(time) {
 
 module.exports = {
         config: {
-                name: "saring",
+                name: "filterm",
                 version: "1.5",
                 author: "NTKhang",
                 countDown: 10,
                 role: 1,
-                shortDescription: "𝗌𝖺𝗋𝗂𝗇𝗀 𝗆𝖾𝗆𝖻𝖾𝗋 𝗌𝖾𝗌𝗎𝖺𝗂 𝗃𝗎𝗆𝗅𝖺𝗁 𝗉𝖾𝗌𝖺𝗇", 
+                description: "𝖻𝖾𝗋𝗌𝗂𝗁𝗄𝖺𝗇 𝗆𝖾𝗆𝖻𝖾𝗋 𝗍𝗂𝖽𝖺𝗄 𝖻𝖾𝗋𝗀𝗎𝗇𝖺", 
                 category: "GRUP",
                 guide: { id: "{pn} <𝗇𝗈𝗆𝗈𝗋/𝖽𝗂𝖾>" }
         },
 
         langs: {
     id: {
-                        needAdmin: "𝖧𝖺𝗋𝖺𝗉 𝗃𝖺𝖽𝗂𝗄𝖺𝗇 𝗋𝖺𝖿𝖿𝖺 𝖺𝖽𝗆𝗂𝗇 𝗀𝗋𝗎𝗉 𝗍𝖾𝗋𝗅𝖾𝖻𝗂𝗁 𝖽𝖺𝗁𝗎𝗅𝗎",
+                        needAdmin: "𝖧𝖺𝗋𝖺𝗉 𝗃𝖺𝖽𝗂𝗄𝖺𝗇 𝗂𝗍𝗌𝗎𝗄𝗂 𝖺𝖽𝗆𝗂𝗇 𝗀𝗋𝗎𝗉 𝗍𝖾𝗋𝗅𝖾𝖻𝗂𝗁 𝖽𝖺𝗁𝗎𝗅𝗎",
                         confirm: "𝖳𝖺𝗇𝗀𝗀𝖺𝗉𝗂 𝗉𝖾𝗌𝖺𝗇 𝗂𝗇𝗂 𝗎𝗇𝗍𝗎𝗄 𝗆𝖾𝗇𝗀𝗈𝗇𝖿𝗂𝗋𝗆𝖺𝗌𝗂 (%1)",
                         kickByBlock: "𝖡𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗒𝖺𝗋𝗂𝗇𝗀 𝗆𝖾𝗆𝖻𝖾𝗋 %1 𝗆𝗈𝗄𝖺𝖽",
                         kickByMsg: "𝖡𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗒𝖺𝗋𝗂𝗇𝗀 %1 𝗆𝖾𝗆𝖻𝖾𝗍 𝖽𝖾𝗇𝗀𝖺𝗇 𝗃𝗎𝗆𝗅𝖺𝗁 𝗉𝖾𝗌𝖺𝗇 %2 𝗉𝖾𝗌𝖺𝗇",
