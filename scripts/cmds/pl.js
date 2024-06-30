@@ -56,18 +56,38 @@ module.exports = {
       if (!pipi) {
         return message.reply('𝖧𝖺𝗋𝖺𝗉 𝗆𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝗇𝖺𝗆𝖺 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁');
       }
-      const filePath = path.join(__dirname, pipi);
+      const filePath = path.join(__dirname, pipi + '.js');
       if (!fs.existsSync(filePath)) {
         return message.reply(`𝖯𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${pipi} 𝗍𝗂𝖽𝖺𝗄 𝖽𝗂𝗍𝖾𝗆𝗎𝗄𝖺𝗇`);
       }
       const content = fs.readFileSync(filePath, 'utf8');
       return message.reply(content);
-	   
+   } else if (args[0] == "bin") {
+      const wak = new bin({ 
+        api_dev_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9', 
+        api_user_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9', 
+      });
+      const file = path.join(__dirname, '..', 'cmds', pipi + '.js');
+      if (!fs.existsSync(file)) {
+        return message.reply("𝖦𝖺𝗄 𝖺𝖽𝖺 𝖿𝗂𝗅𝖾 𝗂𝗍𝗎 𝗐𝖺𝗄!");
+      }
+      fs.readFile(file, 'utf8', async (err, data) => {
+        if (err) throw err;
+        const paste = await wak
+          .createPaste({
+            text: data, 
+            title: pipi, 
+            format: null, 
+            privacy: 1,
+          });
+        const raw = paste.replace("pastebin.com", "pastebin.com/raw");
+        message.reply(raw);
+      });   
     } else if (args[0] == "del") {
       if (!pipi) {
         return message.reply('𝖧𝖺𝗋𝖺𝗉 𝗆𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝗇𝖺𝗆𝖺 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁');
       }
-      const filePath = path.join(__dirname, '..', 'cmds', pipi);
+      const filePath = path.join(__dirname, '..', 'cmds', pipi + '.js');
       if (!fs.existsSync(filePath)) {
         return message.reply(`𝖯𝖾𝗋𝗂𝗇𝗍𝖺𝗁 ${pipi} 𝗍𝗂𝖽𝖺𝗄 𝖽𝗂𝗍𝖾𝗆𝗎𝗄𝖺𝗇`);
       }
