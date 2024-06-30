@@ -5,20 +5,20 @@ if (!global.temp.welcomeEvent)
 module.exports = {
 	config: {
 		name: "welcome",
-		version: "1.5",
-		author: "NTKhang",
+		version: "1.0",
+		author: "Hady Zen",
 		category: "events"
 	},
 
 	langs: {
-		id: {
+		en: {
 			session1: "𝗉𝖺𝗀𝗂",
 			session2: "𝗌𝗂𝖺𝗇𝗀",
 			session3: "𝗌𝗈𝗋𝖾",
 			session4: "𝗆𝖺𝗅𝖺𝗆",
-			multiple1: "𝗄𝖺𝗆𝗎",
-			multiple2: "𝗅𝗎",
-			
+			multiple1: "𝗌𝖾𝗇𝗉𝖺𝗂",
+			multiple2: "𝗍𝗎𝖺𝗇",
+			defaultWelcomeMessage: `𝖧𝖺𝗅𝗅𝗈 {multiple}, 𝖻𝗎𝖺𝗍 𝗄𝖺𝗆𝗎 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂𝗀𝗋𝗎𝗉 𝗂𝗇𝗂 𝖻𝖾𝗋𝗌𝖾𝗇𝖺𝗇𝗀-𝗌𝖾𝗇𝖺𝗇𝗀𝗅𝖺𝗁 𝗉𝖺𝖽𝖺 {session} 𝗒𝖺𝗇𝗀 𝖼𝖾𝗋𝖺𝗁 𝗂𝗇𝗂! (◍•ᴗ•◍)`
 		}
 	},
 
@@ -26,44 +26,29 @@ module.exports = {
 		if (event.logMessageType == "log:subscribe")
 			return async function () {
 				const hours = getTime("HH");
-        const pipi = await global.utils.getStreamFromURL("https://i.ibb.co/vLDCjgc/436744902-429814226465055-4974109979916213420-n-jpg-nc-cat-106-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-Gfz.jpg");
-        const kon = `𝖧𝖺𝗂 𝗌𝖺𝗒𝖺𝗇𝗀! 🫥\n𝖡𝗎𝖺𝗍 {multiple} 𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝖽𝖺𝗍𝖺𝗇𝗀 𝖽𝗂 {boxName}\n𝗌𝖾𝗆𝗈𝗀𝖺 {session}𝗆𝗎 𝗆𝖾𝗇𝗒𝖾𝗇𝖺𝗇𝗀𝗄𝖺𝗇! 🫰`;
-
-		
 				const { threadID } = event;
-				const { nickNameBot } = global.GoatBot.config;
-				const prefix = global.utils.getPrefix(threadID);
 				const dataAddedParticipants = event.logMessageData.addedParticipants;
-				// if new member is bot
-				if (dataAddedParticipants.some((item) => item.userFbId == api.getCurrentUserID())) {
-					if (nickNameBot)
-						api.changeNickname(nickNameBot, threadID, api.getCurrentUserID());
-					return message.send("𝖬𝖺𝗅𝖺𝗌 𝗆𝖾𝗇𝖺𝗇𝗀𝗀𝖺𝗉𝗂! 🧢");
-				}
-				// if new member:
-				if (!global.temp.welcomeEvent[threadID])
+		if (!global.temp.welcomeEvent[threadID])
 					global.temp.welcomeEvent[threadID] = {
 						joinTimeout: null,
 						dataAddedParticipants: []
-					};
-
+	};
 				global.temp.welcomeEvent[threadID].dataAddedParticipants.push(...dataAddedParticipants);
 				clearTimeout(global.temp.welcomeEvent[threadID].joinTimeout);
-
 				global.temp.welcomeEvent[threadID].joinTimeout = setTimeout(async function () {
-					const dataAddedParticipants = global.temp.welcomeEvent[threadID].dataAddedParticipants;
 					const threadData = await threadsData.get(threadID);
-					const dataBanned = threadData.data.banned_ban || [];
 					if (threadData.settings.sendWelcomeMessage == false)
 						return;
+					const dataAddedParticipants = global.temp.welcomeEvent[threadID].dataAddedParticipants;
+					const dataBanned = threadData.data.banned_ban || [];
 					const threadName = threadData.threadName;
+					const ahh = ["https://i.ibb.co/q1zzChB/448629568-476971481497042-5142132637973552522-n-jpg-nc-cat-100-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-Hb5.jpg", "https://i.ibb.co/THCTL5w/448363530-991949752562034-1196926911445185213-n-jpg-nc-cat-110-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-Gs7v.jpg", "https://i.ibb.co/pfYsBD3/448364834-1168382834277627-7956854678474568781-n-jpg-nc-cat-111-ccb-1-7-nc-sid-5f2048-nc-eui2-Ae-G5c.jpg", "https://i.imgur.com/HhCE8LS.jpeg"];
+					const hadi = ahh[Math.floor(Math.random() * ahh.length)];
 					const userName = [],
 						mentions = [];
 					let multiple = false;
-
 					if (dataAddedParticipants.length > 1)
 						multiple = true;
-
 					for (const user of dataAddedParticipants) {
 						if (dataBanned.some((item) => item.id == user.userFbId))
 							continue;
@@ -73,18 +58,10 @@ module.exports = {
 							id: user.userFbId
 						});
 					}
-					// {userName}:   name of new member
-					// {multiple}:
-					// {boxName}:    name of group
-					// {threadName}: name of group
-					// {session}:    session of day
 					if (userName.length == 0) return;
 					let { welcomeMessage = getLang("defaultWelcomeMessage") } =
 						threadData.data;
-					const form = {
-						mentions: welcomeMessage.match(/\{userNameTag\}/g) ? mentions : null
-					};
-	        const tol = kon
+					welcomeMessage = welcomeMessage
 						.replace(/\{userName\}|\{userNameTag\}/g, userName.join(", "))
 						.replace(/\{boxName\}|\{threadName\}/g, threadName)
 						.replace(
@@ -101,17 +78,8 @@ module.exports = {
 										? getLang("session3")
 										: getLang("session4")
 						);
-
-					form.body = welcomeMessage;
-
-					if (threadData.data.welcomeAttachment) {
-						const files = threadData.data.welcomeAttachment;
-						const attachments = files.reduce((acc, file) => {
-							acc.push(drive.getFile(file, "stream"));
-							return acc;
-						}, []);
-					}
-					message.send({ body: tol, attachment: pipi });
+					const ini = await global.utils.getStreamFromURL(hadi);
+					message.send({ body: welcomeMessage, attachment: ini });
 					delete global.temp.welcomeEvent[threadID];
 				}, 1500);
 			};
