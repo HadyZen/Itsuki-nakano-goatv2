@@ -25,19 +25,19 @@ module.exports = {
             files.forEach(file => {
               const filePath = path.join(folderPath, file);
               fs.unlinkSync(filePath);
-              console.log('berhasil');
+              console.log(' ');
             });
-            console.log('berhasil');
+            console.log(' ');
           } else {
-            console.log('y');
+            console.log('');
           }
         } else {
-          console.log('y');
+          console.log('');
         }
       };
       cleanFolder(cacheFolderPath);
       cleanFolder(tmpFolderPath);
-      message.reaction("✨", event.messageID);
+      message.reaction("♻️", event.messageID);
     });
   },
 };
