@@ -1,0 +1,39 @@
+module.exports = {
+  config: {
+    name: "spin",
+    version: "1.0",
+    author: "Hady Zen",
+    countDown: 50,
+    role: 0,
+    description: "𝗌𝗉𝗂𝗇 𝗆𝖺𝗇𝖺 𝗍𝖺𝗎 𝗁𝗈𝗄𝗂", 
+    category: "GAME",
+    guide: { id: "{pn} <𝗎𝖺𝗇𝗀>" }
+  },
+
+  onStart: async function ({ message, args, event, api, usersData }) { 
+    const uang = parseInt(args[0]);
+    const hadi = await usersData.get(event.senderID);
+    const hadiah = uang + uang;
+
+  if (uang < 1) { return message.reply('𝖬𝗂𝗇𝗂𝗆𝖺𝗅 𝗃𝗎𝗆𝗅𝖺𝗁 𝗍𝖺𝗋𝗎𝗁𝖺𝗇 𝖺𝖽𝖺𝗅𝖺𝗁 𝟣 𝗒𝖾𝗇!');
+  }
+  if (hadi.money < uang) { return message.reply('𝖪𝖺𝗆𝗎 𝗍𝗂𝖽𝖺𝗄 𝗉𝗎𝗇𝗒𝖺 𝖼𝗎𝗄𝗎𝗉 𝗒𝖾𝗇');
+  }
+if (!args[0] || isNaN(uang)) { return message.reply('𝖬𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝗍𝖺𝗋𝗎𝗁𝖺𝗇 𝗆𝗎 𝗍𝗎𝖺𝗇!');
+  }
+    const na = Math.floor(Math.random() * 10);
+    const ka = Math.floor(Math.random() * 9);
+    const no = Math.floor(Math.random() * 11);
+    const yen = hadi.money;
+    const itsuki = await message.reply('𝖬𝗎𝗅𝖺𝗂 𝗆𝖾𝗇𝗌𝖾𝗉𝗂𝗇, 𝗌𝖾𝗆𝗈𝗀𝖺 𝗀𝖺𝗄 𝗁𝗈𝗄𝗂! 😈');
+setTimeout(() => { api.editMessage("𝖶𝖺𝗅𝖺𝗐𝖾 𝖻𝖺𝗀𝖺𝗂𝗆𝖺𝗇𝖺 𝗄𝖺𝗁 𝗁𝖺𝗌𝗂𝗅𝗇𝗒𝖺...", itsuki.messageID); }, 2000);
+  if (na == ka || na == no || ka == no) { 
+ setTimeout(() => { api.editMessage(`[ ${na} | ${ka} | ${no} ]\n\n𝗌𝖾𝗅𝖺𝗆𝖺𝗍 𝗄𝖺𝗆𝗎 𝗆𝖾𝗇𝖺𝗇𝗀 ${hadiah} 𝗒𝖾𝗇! 🎉`, itsuki.messageID); }, 3000);
+  const exp = hadi.exp;
+ await usersData.set(event.senderID, { money: yen + hadiah, exp: exp + 1 });
+  } else { 
+   setTimeout(() => { api.editMessage(`[ ${na} | ${ka} | ${no} ]\n\n𝗒𝖺𝗁𝖺𝗁𝖺 𝗄𝖺𝗆𝗎 𝗄𝖺𝗅𝖺𝗁 ${uang} 𝗒𝖾𝗇! 😂`, itsuki.messageID); }, 4000); 
+ await usersData.set(event.senderID, { money: yen - uang });
+  }
+ }, 
+};
