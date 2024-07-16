@@ -16,6 +16,10 @@ module.exports = {
         const hadi = await message.reply('𝗇𝗒𝖺! (◍•ᴗ•◍)');
         setTimeout(() => { api.editMessage(`${event.senderID}`, hadi.messageID); }, 3000);
         break;
+   case 'uid':
+        const hmm = await message.reply('𝗇𝗒𝖺! (◍•ᴗ•◍)');
+        setTimeout(() => { api.editMessage(`${event.messageReply.senderID}`, hmm.messageID); }, 3000);
+        break;
       case 'gid':
         const pipi = await message.reply('𝗇𝗒𝖺! (◍•ᴗ•◍)');
         setTimeout(() => { api.editMessage(`${event.threadID}`, pipi.messageID); }, 3000);
@@ -48,16 +52,21 @@ module.exports = {
   },
   onChat: async function ({ api, message, event }) {
       const prefix = global.GoatBot.config.prefix;
+      const maintain = global.GoatBot.config.adminOnly.enable;
       const itsuki = Object.keys(event.mentions);
 if (itsuki == botID) {
 return message.reply('𝖤𝗁𝗁𝗁𝗁, 𝖺𝖽𝖺 𝗒𝖺𝗇𝗀 𝖻𝗂𝗌𝖺 𝗄𝗎𝖻𝖺𝗇𝗍𝗎 𝗄𝖺𝗄𝖺? (◍•ᴗ•◍)');
 }
+if (maintain == true) { 
+return;
+} else {
     if (event.body && event.body.toLowerCase() == "prefix") {
       const a = await message.reply(`✨ 𝖠𝗐𝖺𝗅𝖺𝗇 𝗂𝗍𝗌𝗎𝗄𝗂 𝖺𝖽𝖺𝗅𝖺𝗁: [ ${prefix} ]`);
       setTimeout(() => { api.editMessage(`𝖪𝖾𝗍𝗂𝗄 ${prefix}𝗆𝖾𝗇𝗎 𝖻𝗎𝖺𝗍 𝗅𝗂𝗁𝖺𝗍 𝖽𝖺𝖿𝗍𝖺𝗋 𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁𝗄𝗎! (◍•ᴗ•◍)`, a.messageID); }, 6000);
       return;
     }
+}
    if (event.body.toLowerCase() == "hmm") { return message.unsend(event.messageReply.messageID);
 }
   }
-}
+                   }
