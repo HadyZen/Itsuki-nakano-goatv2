@@ -9,7 +9,7 @@ module.exports = {
     category: 'AI',
     description: '𝗀𝗉𝗍 𝗈𝗋𝗂𝗀𝗂𝗇𝖺𝗅',
     author: 'Hady Zen',
-    guide: { en: '{pn} <𝗉𝗋𝗈𝗆𝗉𝗍>' }
+    guide: { id: '{pn} <𝗉𝗋𝗈𝗆𝗉𝗍>' }
   },
 
   onStart: async function ({ message, args, event, api }) {
