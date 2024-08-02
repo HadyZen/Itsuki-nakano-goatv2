@@ -1,6 +1,6 @@
 const { config } = global.GoatBot;
 
-module.exports = {
+module.exports = { 
   config: {
     name: "maintain",
     version: "1.0",
