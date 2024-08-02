@@ -1,5 +1,4 @@
 const { removeHomeDir, log } = global.utils;
-
 module.exports = {
 	config: {
 		name: "eval",
