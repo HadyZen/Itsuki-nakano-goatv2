@@ -9,7 +9,7 @@ module.exports = {
                 countDown: 10,
                 role: 0,
                 description: "𝗍𝖺𝗆𝖻𝖺𝗁𝗄𝖺𝗇 𝗉𝖾𝗇𝗀𝗀𝗎𝗇𝖺 𝗄𝖾 𝗀𝗋𝗎𝗉𝗆𝗎", 
-                category: "GRUP",
+                category: "GRUP", 
                 guide: { id: "{pn} <𝗎𝗂𝖽>" }
         },
 
