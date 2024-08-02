@@ -1,5 +1,5 @@
 const moment = require('moment-timezone');
-
+const font = require("fontstyles");
 module.exports = {
     config: {
         name: "daily",
@@ -13,11 +13,20 @@ module.exports = {
     },
 
     onStart: async function ({ message, usersData, event, commandName }) {
+const { gender, name } = await usersData.get(event.senderID);
+const names = name.split(" ")[0];
+const nama = font.bold(names);
+let kelamin = "";
+if (gender == 1) { 
+ kelamin += "-𝗰𝗵𝗮𝗻";
+} else if (gender == 2) { 
+ kelamin += "-𝗸𝘂𝗻";
+} 
         const waktu = moment.tz("Asia/Jakarta").format("DD/MM/YYYY");
         const data = await usersData.get(event.senderID);
 
         if (data.data.daily === waktu) {
-            return message.reply('𝖪𝖺𝗆𝗎 𝗌𝗎𝖽𝖺𝗁 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂 𝗂𝗇𝗂!');
+            return message.reply(nama + kelamin + ', 𝗄𝖺𝗆𝗎 𝗌𝗎𝖽𝖺𝗁 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂 𝗂𝗇𝗂!');
         }
 
         message.reply({
@@ -34,11 +43,19 @@ module.exports = {
     onReply: async function ({ event, message, Reply, usersData }) {
         const { senderID } = event;
         const {  senderID: originalSenderID } = Reply;
+const { gender, name } = await usersData.get(event.senderID);
+const names = name.split(" ")[0];
+const nama = font.bold(names);
+let kelamin = "";
+if (gender == 1) { 
+ kelamin += "-𝗰𝗵𝗮𝗻";
+} else if (gender == 2) { 
+ kelamin += "-𝗸𝘂𝗻";
+} 
 
         if (senderID !== originalSenderID) {
             return message.reply(' ');
         }
-
         const pilih = event.body;
         const waktu = moment.tz("Asia/Jakarta").format("DD/MM/YYYY");
         const data = await usersData.get(event.senderID);
@@ -51,7 +68,7 @@ module.exports = {
                 data: { ...data.data, daily: waktu }
             });
             message.unsend(Reply.messageID);
-            message.reply('𝖪𝖺𝗆𝗎 𝖻𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂𝖺𝗇 𝟮 𝗒𝖾𝗇');
+            message.reply(nama + kelamin + ', 𝗄𝖺𝗆𝗎 𝖻𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂𝖺𝗇 𝟮 𝗒𝖾𝗇!');
 }
         } else if (pilih.toLowerCase() == "exp") {
       if (data.data.daily === waktu) { return; 
@@ -61,7 +78,7 @@ module.exports = {
                 data: { ...data.data, daily: waktu }
             });
             message.unsend(Reply.messageID);
-            message.reply('𝖪𝖺𝗆𝗎 𝖻𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂𝖺𝗇 𝟭𝟬 𝖾𝗑𝗉');
+            message.reply(nama + kelamin + ', 𝗄𝖺𝗆𝗎 𝖻𝖾𝗋𝗁𝖺𝗌𝗂𝗅 𝗆𝖾𝗇𝗀𝗄𝗅𝖺𝗂𝗆 𝗁𝖺𝖽𝗂𝖺𝗁 𝗁𝖺𝗋𝗂𝖺𝗇 𝟭𝟬 𝖾𝗑𝗉!');
 }
         }
     }
