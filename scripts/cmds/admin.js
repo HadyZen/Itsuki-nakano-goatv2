@@ -9,7 +9,7 @@ module.exports = {
  countDown: 10,
  role: 0,
  description: "𝗉𝖾𝗋𝗂𝗇𝗍𝖺𝗁 𝖺𝖽𝗆𝗂𝗇 𝗂𝗍𝗌𝗎𝗄𝗂",
- category: "ADMIN",
+ category: "SISTEM",
  guide: { id: '{pn} <𝖺𝖽𝖽/𝖽𝖾𝗅/𝗅𝗂𝗌𝗍> <𝗎𝗂𝖽/𝗍𝖺𝗀>' } 
 },
 
