@@ -1,6 +1,6 @@
 {
   "facebookAccount": {
-    "email": "bintangbiru425@gmail.com",
+    "email": "",
     "password": "",
     "2FASecret": "",
     "i_user": "",
@@ -43,8 +43,8 @@
       "apiKey": "AIzaSyAX9ga--YQX8Jv6w6Sn5DY6B82MybMSDVM"
     },
     "gRecaptcha": {
-      "siteKey": "6LfDe7QmAAAAAMdncmzO8RDLROsn_U-VPkuV_LzZ",
-      "secretKey": "6LfDe7QmAAAAAOyLAlcnK-YxCVWwzdjow-h5pNJg"
+      "siteKey": "6LdZRCQqAAAAANl30J-yR_LsJhFt0phBl5zW-gGz",
+      "secretKey": "6LdZRCQqAAAAAAIzm5JN8bhoZeJk2tv_Booi3Joh"
     }
   },
   "dashBoard": {
@@ -107,13 +107,13 @@
     }
   },
   "hideNotiMessage": {
-    "commandNotFound": false,
-    "adminOnly": false,
-    "threadBanned": false,
-    "userBanned": false,
+    "commandNotFound": true,
+    "adminOnly": true,
+    "threadBanned": true,
+    "userBanned": true,
     "needRoleToUseCmd": false,
-    "needRoleToUseCmdOnReply": false,
-    "needRoleToUseCmdOnReaction": false
+    "needRoleToUseCmdOnReply": true,
+    "needRoleToUseCmdOnReaction": true
   },
   "logEvents": {
     "disableAll": false,
