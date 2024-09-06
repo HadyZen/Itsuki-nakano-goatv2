@@ -65,12 +65,12 @@ module.exports = {
       return message.reply(content);
    } else if (args[0] == "bin") {
       const wak = new bin({ 
-        api_dev_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9', 
-        api_user_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9', 
+        api_dev_key: 'cSF89HPf62LOKUwrbelAa41K0cNFNkbw', 
+        api_user_key: 'cSF89HPf62LOKUwrbelAa41K0cNFNkbw', 
       });
       const file = path.join(__dirname, '..', 'cmds', pipi + '.js');
       if (!fs.existsSync(file)) {
-        return message.reply("𝖦𝖺𝗄 𝖺𝖽𝖺 𝖿𝗂𝗅𝖾 𝗂𝗍𝗎 𝗐𝖺𝗄!");
+        return message.reply("𝖥𝗂𝗅𝖾 𝗒𝖺𝗇𝗀 𝗄𝖺𝗆𝗎 𝗆𝖺𝗎 𝗍𝗂𝖽𝖺𝗄 𝖽𝗂𝗍𝖾𝗆𝗎𝗄𝖺𝗇");
       }
       fs.readFile(file, 'utf8', async (err, data) => {
         if (err) throw err;
