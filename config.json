@@ -33,15 +33,15 @@
   "timeZone": "Asia/Jakarta",
   "credentials": {
     "gmailAccount": {
-      "email": "hadipranata11111@gmail.com",
-      "clientId": "772145788550-utgkpfq2quhplf5emjgusmhhrm1d287k.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04MTsYiRA338nCgYIARAAGAQSNwF-L9IraUyJb4EvlBV20C3zBYU7_VBoC72tkQZhn1dxWjZV-6AX2OciM1SypynIHTtasQqqSZA",
+      "email": "",
+      "clientId": "",
+      "clientSecret": "",
+      "refreshToken": "",
       "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6LdZRCQqAAAAANl30J-yR_LsJhFt0phBl5zW-gGz",
-      "secretKey": "6LdZRCQqAAAAAAIzm5JN8bhoZeJk2tv_Booi3Joh"
+      "siteKey": "",
+      "secretKey": ""
     }
   },
   "dashBoard": {
